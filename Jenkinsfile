@@ -1,11 +1,11 @@
 pipeline {
   agent any
-#{
-#    docker {
-#      image 'quay.io/ansible/molecule'
-#      args '-v /var/run/docker.sock:/var/run/docker.sock'
-#    }
-#  }
+//{
+//    docker {
+//     image 'quay.io/ansible/molecule'
+//      args '-v /var/run/docker.sock:/var/run/docker.sock'
+//    }
+//  }
 
   stages {
 
