@@ -13,7 +13,7 @@ pipeline {
       steps {
         sh '''
           docker -v
-          python -V
+          python3 -V
           ansible --version
           molecule --version
         '''
@@ -22,7 +22,10 @@ pipeline {
 
     stage ('Molecule test') {
       steps {
-        sh 'sudo molecule test --all'
+        sh '''
+          cd ./roles/tomcat/
+          molecule test --all'
+        '''
       }
     }
   }
