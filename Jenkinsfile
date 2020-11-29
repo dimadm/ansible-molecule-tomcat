@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-     image 'quay.io/ansible/molecule'
-      args '--privileged -v /var/run/docker.sock:/var/run/docker.sock'
+      image 'quay.io/ansible/molecule'
+      args '-u root:sudo -v /var/run/docker.sock:/var/run/docker.sock'
     }
   }
 
