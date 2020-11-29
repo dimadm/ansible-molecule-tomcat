@@ -24,7 +24,7 @@ pipeline {
       steps {
         sh '''
           cd ./roles/tomcat/
-          molecule test --all'
+          molecule test --all
         '''
       }
     }
