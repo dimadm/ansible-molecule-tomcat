@@ -1,5 +1,5 @@
 pipeline {
-  agent any {
+  agent {
     docker {
      image 'quay.io/ansible/molecule'
       args '--privileged -v /var/run/docker.sock:/var/run/docker.sock'
